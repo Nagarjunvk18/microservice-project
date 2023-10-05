@@ -1,17 +1,15 @@
 package com.microservice.exception;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
 
- 
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
 public class ErrorResponse {
 	private String message;
 	private String url;
 	private String timestamp;
+	public ErrorResponse(String message, String url, String timestamp) {
+		super();
+		this.message = message;
+		this.url = url;
+		this.timestamp = timestamp;
+	}
+	
+	
 }
